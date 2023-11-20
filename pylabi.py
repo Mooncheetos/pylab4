@@ -25,7 +25,7 @@ def f_res(x):
     return (1 / 17) * (21 * mt.exp(4 * x) + mt.sin(x) - 4 * mt.cos(x))
 
 
-xnew, ynew = metEiLer(f, 0, -1, 1, 0.1)
+xnew, ynew = metEiLer(f, 0, 1, 1, 0.1)
 yres = [f_res(i) for i in xnew]
 err = [mt.fabs(f_res(xnew[k] - ynew[k])) for k in range(len(xnew))]
 
